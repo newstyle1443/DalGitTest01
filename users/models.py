@@ -8,7 +8,7 @@ class UserManager(BaseUserManager):
     def create_user(self, email, password, **kwargs):
 
         if not email:
-            raise ValueError('Users must have an email address')
+            raise ValueError('이메일은 필수 항목입니다.')
 
         user = self.model(
             email=self.normalize_email(email),
