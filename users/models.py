@@ -43,9 +43,9 @@ class User(AbstractBaseUser):
     name = models.CharField(null=False, blank=False, max_length=50)
     gender = models.CharField(choices=GENDERS, max_length=10)
     introduction = models.TextField(null=True, blank=True)
-    address = models.CharField("주소")
-    height = models.TextField("키")
-    weight = models.TextField("몸무게")
+    address = models.CharField("주소 수정")
+    height = models.TextField("키 수정")
+    weight = models.TextField("몸무게 수정")
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
